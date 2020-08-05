@@ -1,18 +1,18 @@
 using System;
-using System.Collections.Generic; 
+using System.Collections.Generic;
 
 namespace CMS.UI.Models
 {
-    public class Course
+
+    public class Course : ICourse
     {
         public int CourseId;
         public string CourseName;
 
         public static int MaxSubjects = 8;
 
-        //List<string> list = new List<string>();
-
         private List<CourseSubject> subjects = null;
+
 
         //public property Subjects
         public List<CourseSubject> Subjects
@@ -24,13 +24,9 @@ namespace CMS.UI.Models
             private set { subjects = value; }
         }
 
-        public void CalculateFees(decimal electivesFees,
-            out decimal finalFees, decimal roughFees = 0)
-            {
-                //roughFees = 10000;
-                finalFees = electivesFees * roughFees;
-            }
-        public void AddSubject(CourseSubject subject) 
+        public int TotalDurationInDays { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public void AddSubject(CourseSubject subject)
         {
             subjects.Add(subject);
 
@@ -46,6 +42,6 @@ namespace CMS.UI.Models
         {
             subjects.AddRange(subjectList);
         }
-        
+
     }
 }

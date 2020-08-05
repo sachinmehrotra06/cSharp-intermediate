@@ -4,10 +4,6 @@ namespace CMS.UI.Models
     {
         public int Id;
         public string SubjectName; 
-        public CourseSubject()
-        {
-
-        }
         
     }
 }
