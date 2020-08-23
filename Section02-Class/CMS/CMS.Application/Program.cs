@@ -81,6 +81,10 @@ namespace CMS.Application
             Console.WriteLine(csCourse.GetTotalElectives());
             Console.WriteLine(ecCourse.GetTotalElectives());
 
+            //section 6 Inheritence
+            Student student5 = new Student();
+            student5.GetFullName();
+
 
 
 
